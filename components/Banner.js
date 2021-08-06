@@ -3,7 +3,7 @@ import Image from "next/image";
 function Banner() {
   return (
     <div className="relative h-[250px] sm:h-[350px] lg:h-[450px] xl:h-[550px] 2xl:h-[650px]">
-      <Image src="/banner.webp" layout="fill" objectFit="cover" />
+      <Image src="https://res.cloudinary.com/dp0qzldgh/image/upload/v1628144458/hero_hjmrxv.webp" layout="fill" objectFit="cover" />
       <div className="absolute top-1/4 w-full pl-5 md:pl-20">
         <div className="max-w-7xl mx-auto">
           <p className="text-lg sm:text-2xl lg:text-5xl font-bold text-white text-left">
