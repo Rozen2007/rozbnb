@@ -4,6 +4,8 @@ import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 import Head from "next/head";
+import Fade from 'react-reveal/Fade';
+
 function Search({ searchResults }) {
   const router = useRouter();
   const { location, startDate, endDate, guests } = router.query;
@@ -21,6 +23,7 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />
+      <Fade>
       <main className="max-w-7xl mt-24 mx-auto flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
@@ -53,6 +56,7 @@ function Search({ searchResults }) {
           </div>
         </section>
       </main>
+      </Fade>
       <Footer />
     </div>
   );
