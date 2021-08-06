@@ -6,7 +6,7 @@ function Banner() {
       <Image src="https://res.cloudinary.com/dp0qzldgh/image/upload/v1628144458/hero_hjmrxv.webp" layout="fill" objectFit="cover" />
       <div className="absolute top-1/4 w-full pl-5 md:pl-20">
         <div className="max-w-7xl mx-auto">
-          <p className="text-lg sm:text-2xl lg:text-7xl font-bold text-white text-left leading-7">
+          <p className="text-lg sm:text-2xl title lg:text-7xl font-bold text-white text-left leading-6">
             Olympian &<br /> Paralympian
             <br /> Online
             <br /> Experiences

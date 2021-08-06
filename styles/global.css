@@ -4,7 +4,7 @@
 
 @layer components {
   .button {
-    @apply px-4 py-2  border rounded-full hover:shadow-lg cursor-pointer active:scale-105 active:bg-gray-100 transition transform duration-100 ease-out;
+    @apply px-4 py-2 transition duration-100 ease-out transform border rounded-full cursor-pointer hover:shadow-lg active:scale-105 active:bg-gray-100;
   }
 }
 
@@ -34,3 +34,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.title{
+  font-size: 8vw;
+  line-height: 8vw;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  background: url(https://wallpaperaccess.com/full/1092593.png); 
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms forwards ;
+  position: cover;
+}
+
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
