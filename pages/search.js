@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Head from "next/head";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -14,6 +15,10 @@ function Search({ searchResults }) {
   const range = `${formatedStartDate} - ${formatedEndDate}`;
   return (
     <div className=" h-screen">
+      <Head>
+        <title>Airbnb: {location}  </title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <Header
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />

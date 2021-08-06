@@ -33,3 +33,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.loader {
+  justify-content: center;
+  align-items: center;
+
+
+}

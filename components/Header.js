@@ -106,7 +106,7 @@ function Header({ placeholder }) {
       {/* Date range picker */}
       <div className="absolute w-screen md:w-[580px] left-1 top-20 md:left-[20%] lg:left-[30%]   z-50">
         {searchInput && (
-          <div className="z-50 flex flex-col p-5 mt-5 bg-white shadow-md md:col-span-3 w-max rounded-xl">
+          <div className="z-50 flex flex-col p-5 mt-5 bg-white shadow-md md:col-span-4 w-max rounded-xl">
             <DateRangePicker
               ranges={[selectionRange]}
               minDate={new Date()}
