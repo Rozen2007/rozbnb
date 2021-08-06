@@ -17,7 +17,7 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />
-      <main className="max-w-7xl mx-auto flex">
+      <main className="max-w-7xl mt-24 mx-auto flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
             300+ Stays - {range} - for {guests} guests
