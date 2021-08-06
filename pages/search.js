@@ -4,7 +4,6 @@ import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 import Head from "next/head";
-
 function Search({ searchResults }) {
   const router = useRouter();
   const { location, startDate, endDate, guests } = router.query;
@@ -37,7 +36,7 @@ function Search({ searchResults }) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col p-10 rounded-lg m-5 shadow-2xl "> 
             {searchResults?.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
