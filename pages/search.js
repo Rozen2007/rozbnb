@@ -24,7 +24,7 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />
-      <Fade>
+     
       <main className=" mt-24 mx-auto flex">
         <section className="flex-grow pt-14 ml-8">
           <p className="text-xs ">
@@ -40,6 +40,7 @@ function Search({ searchResults }) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
+          <Fade left>
           <div className="flex flex-col p-10 rounded-lg m-5 shadow-2xl "> 
             {searchResults?.map(
               ({ img, location, title, description, star, price, total }) => (
@@ -55,12 +56,15 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+          </Fade>
         </section>
-        <section className="hidden xl:inline-flex xl:min-w-[600px]  overlay pt-14"> 
-              <Map searchResults={searchResults} />
-        </section>
+        <Fade right>
+          <section className="hidden xl:inline-flex xl:min-w-[600px]  overlay pt-14"> 
+                <Map searchResults={searchResults} />
+          </section>
+        </Fade>
       </main>
-      </Fade>
+      
       <Footer />
     </div>
   );
