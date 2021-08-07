@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 import Head from "next/head";
 import Fade from 'react-reveal/Fade';
+import Map from "../components/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -24,10 +25,10 @@ function Search({ searchResults }) {
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />
       <Fade>
-      <main className="max-w-7xl mt-24 mx-auto flex">
-        <section className="flex-grow pt-14 px-6">
-          <p className="text-xs">
-            300+ Stays - {range} - for {guests} guests
+      <main className=" mt-24 mx-auto flex">
+        <section className="flex-grow pt-14 ml-8">
+          <p className="text-xs ">
+            300+ Stays - <span className="font-bold">{range}</span>- for {guests} guests
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
             Stays in {location}
@@ -54,6 +55,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]  overlay pt-14"> 
+              <Map searchResults={searchResults} />
         </section>
       </main>
       </Fade>

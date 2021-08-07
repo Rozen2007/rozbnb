@@ -53,7 +53,7 @@ function Header({ placeholder }) {
 
     useEffect(() => {
        const listener = () => {
-          if (window.scrollY > 400) {
+          if (window.scrollY > 100) {
             setHandleShow(true); 
             } else 
             setHandleShow(false); 
