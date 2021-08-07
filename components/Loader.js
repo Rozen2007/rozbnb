@@ -1,12 +1,8 @@
 function Loader() {
     return (
-      <div className="bg-blue-6
-      
-      
-      
-      00">
+      <div className="flex items-center justify-center min-h-screen flex-col">
         <img
-          className="flex items-center ml-[20%] justify-center min-h-screen "
+          className=""
           src="https://media.giphy.com/media/5YbQYuAnMfNkUU6GpT/giphy.gif"
         />
       </div>

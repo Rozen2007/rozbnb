@@ -29,7 +29,7 @@ export default function Home({ exploreData, liveAnywhere }) {
       {
       loading?(
         <Loader/>
-      ):(
+       ):(
         <div>
           <Header />
           <Banner />
@@ -78,7 +78,7 @@ export default function Home({ exploreData, liveAnywhere }) {
             <Footer />
           </footer>
       </div>
-      )}
+      )} 
     </div>
   );
 }
