@@ -24,7 +24,18 @@ export default function Home({ exploreData, liveAnywhere }) {
       
       <Head>
         <title>Airbnb: Holiday Rentals, Cabins, Beach Houses </title>
-        <link rel="icon" href="/logo.png" />
+        <meta
+          name="description"
+          content="Airbnb clone made by rozen using Next.js, Tailwind.css, etc"
+        />
+        <meta
+          name="keywords"
+          content="Airbnb-clone, Airbnb-Rozen, Airbnb-2-rozen, Rozen Deedi"
+        />
+        <meta property="og:title" content="Rozen's Airbnb" />
+        <meta property="og:image" content="https://res.cloudinary.com/dp0qzldgh/image/upload/v1628345132/Untitled_design_3_ybcutg.png" />
+        <meta property="og:url" content="https://airbnb-2-rozen.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />`
       </Head>
       {
       loading?(
