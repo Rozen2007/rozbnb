@@ -59,3 +59,9 @@ html {
 }
 
 
+.popup .mapboxgl-popup-content {
+
+  padding: 0;
+  margin: 0;
+}
+
