@@ -26,7 +26,7 @@ function Search({ searchResults }) {
       />
      
       <main className=" mt-24 mx-auto flex">
-        <section className="flex-grow pt-14 ml-8">
+        <section className="flex-grow pt-14 ml-8 ">
           <p className="text-xs ">
             300+ Stays - <span className="font-bold">{range}</span>- for {guests} guests
           </p>
@@ -41,7 +41,7 @@ function Search({ searchResults }) {
             <p className="button">More Filters</p>
           </div>
           <Fade left>
-          <div className="flex flex-col p-10 rounded-lg m-5 shadow-2xl "> 
+          <div className="flex flex-col p-8 rounded-lg mr-10  shadow-2xl "> 
             {searchResults?.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
