@@ -67,7 +67,7 @@ function Header({ placeholder }) {
         
   return (
 
-    <header className={`fixed top-0 z-40 grid w-screen grid-cols-1 p-5 ${handleShow ? "bg-white shadow-md" : ""} sm:grid-cols-3 md:px-10`}> 
+    <header className={`fixed top-0 z-40 grid w-screen grid-cols-1 p-5 ${handleShow ? "bg-white shadow-md" : ""} md:grid-cols-3  z-50 grid grid-flow-row grid-cols-2 p-5 md:px-10 sm:grid-cols-3 `}> 
     {/* fixed w-full top-0 z-50 grid sm:grid-cols-4 grid-cols-1 navbar p-5 md:px-10 false */}
       {/* Left logo */}
       <div
@@ -93,7 +93,7 @@ function Header({ placeholder }) {
         <SearchIcon className="hidden h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:inline-flex md:mx-2" />
       </div>
       {/* Right */}
-      <div className="flex items-center justify-end space-x-4 text-gray-400">
+      <div className="hidden md:flex items-center justify-end space-x-4 text-gray-400">
         <p className="hidden pl-4 font-bold cursor-pointer md:inline font">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer" />
 
