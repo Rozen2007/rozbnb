@@ -53,7 +53,7 @@ function Header({ placeholder }) {
 
     useEffect(() => {
        const listener = () => {
-          if (window.scrollY > 100) {
+          if (window.scrollY > 80) {
             setHandleShow(true); 
             } else 
             setHandleShow(false); 
@@ -67,7 +67,7 @@ function Header({ placeholder }) {
         
   return (
 
-    <header className={`fixed top-0 z-40 grid w-screen grid-cols-1 p-5 ${handleShow ? "bg-white shadow-md" : ""} md:grid-cols-3  z-50 grid grid-flow-row grid-cols-2 p-5 md:px-10 sm:grid-cols-3 `}> 
+    <header className={`fixed top-0 z-40 grid w-screen grid-cols-1  transition duration-100 ease-out p-5 ${handleShow ? "bg-white shadow-md" : ""} md:grid-cols-3  z-50 grid grid-flow-row grid-cols-2 p-5 md:px-10 sm:grid-cols-3 `}> 
     {/* fixed w-full top-0 z-50 grid sm:grid-cols-4 grid-cols-1 navbar p-5 md:px-10 false */}
       {/* Left logo */}
       <div
@@ -82,7 +82,7 @@ function Header({ placeholder }) {
         />
       </div>
       {/* Search */}
-      <div className="flex items-center py-2 bg-white rounded-full md:border-2 md:shadow-sm ">
+      <div className="flex items-center py-2 bg-white rounded-full md:border-2 md:shadow-sm  ">
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
@@ -123,18 +123,18 @@ function Header({ placeholder }) {
                 onChange={(e) => setNoOfGuests(e.target.value)}
                 min={1}
                 type="number"
-                className="w-12 pl-2 text-lg text-red-400 outline-none"
+                className="w-12 pl-2 text-lg ml-2 rounded-md text-red-400 outline-none"
               />
             </div>
             <div className="flex w-screen md:w-[580px]">
               <button
-                className="w-1/2 text-gray-500 md:flex-grow"
+                className="w-1/2 text-gray-500 hover:shadow-inner md:flex-grow"
                 onClick={resetInput}
               >
                 Cancel
               </button>
               <button
-                className="w-1/2 text-red-400 md:flex-grow"
+                className="w-1/2 bg-red-400 h-8 text-white hover:bg-white  hover:text-red-400 hover:shadow-inner rounded-md md:flex-grow"
                 onClick={search}
               >
                 Search
