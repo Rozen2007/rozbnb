@@ -59,16 +59,14 @@ html {
 }
 
 
-.popup .mapboxgl-popup-content {
 
-  padding: 0;
-  margin: 0;
+
+
+.mapboxgl-popup-content{
+  background-color: rgba(255, 255, 255, 0.95);
+
 }
 
-
-.mapboxgl-popup-content{position:relative;
-  background:#fff; 
-  border-radius:3px;
-  box-shadow:0 1px 2px rgba(0,0,0,.1);
-  padding:10px 10px 15px;
-  pointer-events:auto}
+.mapboxgl-popup-close-button{
+  padding: 5px;
+}

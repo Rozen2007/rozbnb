@@ -26,7 +26,7 @@ function Search({ searchResults }) {
       />
      
       <main className=" mt-24 mx-auto flex">
-        <section className="flex-grow pt-14 ml-8 ">
+        <section className="flex-grow pt-10 pb-10 ml-8 ">
           <p className="text-xs ">
             300+ Stays - <span className="font-bold">{range}</span>- for {guests} guests
           </p>
@@ -59,7 +59,7 @@ function Search({ searchResults }) {
           </Fade>
         </section>
         <Fade right>
-          <section className="hidden xl:inline-flex xl:min-w-[600px]  overlay pt-14"> 
+          <section className="hidden xl:inline-flex xl:min-w-[600px]  pb-9 overlay pt-14"> 
                 <Map searchResults={searchResults} />
           </section>
         </Fade>
@@ -73,7 +73,7 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://links.papareact.com/isz").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/IAGU").then(
     (res) => res.json()
   );
   return {

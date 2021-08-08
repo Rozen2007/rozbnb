@@ -19,7 +19,7 @@ function Map(props) {
   const [viewport, setViewport] = useState({
     latitude: center.latitude,
     longitude: center.longitude,
-    zoom: 11,
+    zoom: 12,
   });
   return (
     <ReactMapGL
@@ -39,13 +39,13 @@ function Map(props) {
             offsetLeft={-10}
             offsetTop={-10}
           >
-            <h1
+            <p
               onClick={() => setSelectedLocation(result)}
-              className="cursor-pointer z-index-1 bg-transparent rounded-md w-10 p-0 hover:animate-bounce "
+              className="cursor-pointer   z-index-1   rounded-md w-10 pl-1 hover:animate-bounce "
               aria-label="push-pin"
             >
-              {/* {result.price} */}
-            <img
+             
+              <img
               onClick={() => {
                 setSelectedLocation(result);
               }}
@@ -53,7 +53,7 @@ function Map(props) {
               className={"h-8 cursor-pointer"}
               alt=""
             />
-            </h1>
+            </p>
           </Marker>
           {selectedLocation.long === result.long ? (
             <Popup
@@ -61,11 +61,11 @@ function Map(props) {
                             closeOnClick={true}
                             latitude={result.lat}
                             longitude={result.long}
-                            className="rounded-xl"
+                            className="rounded-2xl"
 
                            
                         >
-                            <div className="p-3 min-w-[300px]  relative z-50">
+                            <div className="p-3 min-w-[300px]  relative z-50 rounded-2xl">
                                 <div className="image_wrapper">
                                   <img src={result.img} loading="lazy" className="w-full object-cover h-48 rounded-lg mb-3 image" alt="" />
                                 </div>
