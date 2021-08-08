@@ -41,9 +41,10 @@ function Map(props) {
           >
             <h1
               onClick={() => setSelectedLocation(result)}
-              className="cursor-pointer z-index-1  "
+              className="cursor-pointer z-index-1 bg-transparent rounded-md w-10 p-0 hover:animate-bounce "
               aria-label="push-pin"
             >
+              {/* {result.price} */}
             <img
               onClick={() => {
                 setSelectedLocation(result);
