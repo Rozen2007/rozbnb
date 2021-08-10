@@ -9,8 +9,9 @@ import Map from "../components/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
-  const { location, startDate, endDate, guests } = router.query;
+  const { location, startDate, endDate, noOfGuests } = router.query;
 
+  
   const formatedStartDate = format(new Date(startDate), "dd MMM yy");
   const formatedEndDate = format(new Date(endDate), "dd MMM yy");
 
@@ -22,7 +23,8 @@ function Search({ searchResults }) {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header
-        placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
+        placeholder={` ${location} | ${formatedStartDate} - ${formatedEndDate} | ${ noOfGuests } guests`}
+        className="bg-white"
       />
 
 
@@ -32,7 +34,7 @@ function Search({ searchResults }) {
 
       <main className="  -mb-[60%] -mt-[100px] relative mx-42 md:w-[73%] bg-white shadow-2xl m-3 ml-12  p-8 t-0 rounded-2xl mr-10 mt-0 pb-10  md:ml-40 lg:ml-52 z-10">    
           <p className="text-xs ">
-            300+ Stays - <span className="font-bold">{range}</span>- for {guests} guests
+            300+ Stays - <span className="font-bold">{range}</span>- for {noOfGuests} guests
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
             Stays in {location}
