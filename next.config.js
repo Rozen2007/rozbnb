@@ -1,4 +1,5 @@
 module.exports = {
+  reactStrictMode: true,
   images: {
     domains: ["links.papareact.com","i.ibb.co", "a0.muscache.com","res.cloudinary.com", "https://media.giphy.com/"],
   },

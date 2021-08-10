@@ -24,24 +24,28 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${location} | ${formatedStartDate} - ${formatedEndDate} | ${guests} guests`}
       />
+
+
+        <Map searchResults={searchResults} />
+
      
-      <main className=" mt-24 mx-auto flex">
-        <section className="flex-grow pt-10 pb-10 ml-8 ">
+
+      <main className="  -mb-[60%] -mt-[100px] relative mx-42 w-[73%] bg-white shadow-2xl m-24 sm:ml-0  p-8 t-0 rounded-2xl mr-10 mt-0 pb-10 sm:ml- md:ml-40 lg:ml-52 z-10">    
           <p className="text-xs ">
             300+ Stays - <span className="font-bold">{range}</span>- for {guests} guests
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
             Stays in {location}
           </h1>
-          <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-norap">
+          <div className="hidden lg:inline-flex mb-5 space-x-2 text-gray-800 whitespace-norap">
             <p className="button">Cancellation Flexibility</p>
             <p className="button">Type Of Place</p>
             <p className="button">Price</p>
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
-          <Fade left>
-          <div className="flex flex-col p-8 rounded-lg mr-10  shadow-2xl "> 
+          <Fade >
+          <div className="flex flex-col  "> 
             {searchResults?.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
@@ -56,13 +60,8 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+          
           </Fade>
-        </section>
-        <Fade right>
-          <section className="hidden xl:inline-flex xl:min-w-[600px]  pb-9 overlay pt-14"> 
-                <Map searchResults={searchResults} />
-          </section>
-        </Fade>
       </main>
       
       <Footer />

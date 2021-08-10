@@ -26,10 +26,11 @@ function Map(props) {
       mapStyle="mapbox://styles/rozen2007/cks17c2qh4hwo18p6sdgj1kdv/draft"
       mapboxApiAccessToken="pk.eyJ1Ijoicm96ZW4yMDA3IiwiYSI6ImNrczE3NDBiNTFxdzEybm44bm9jdjFnOXkifQ.JDPUCSZn5aoKkzkY5-5KzQ"
       {...viewport}
-      width="95%"
-      height="99%"
+      width="100%"
+      height="100vh"
       onViewportChange={(viewport) => setViewport(viewport)}
-      className=" shadow-xl overlay p-10  rounded-2xl "
+      className=" z-0 -mb-[40vh] absolute shadow-xl bottom-0 bg-gradient-to-t from-blue-to-gray bg-fixed "
+      style={{marginBottom: '-40vh'}}
     >
       {props.searchResults.map((result) => (
         <div key={result.long}>
@@ -41,7 +42,7 @@ function Map(props) {
           >
             <p
               onClick={() => setSelectedLocation(result)}
-              className="cursor-pointer   z-index-1   rounded-md w-10 pl-1 hover:animate-bounce "
+              className="cursor-pointer      rounded-md w-10 pl-1 hover:animate-bounce "
               aria-label="push-pin"
             >
              
@@ -50,7 +51,7 @@ function Map(props) {
                 setSelectedLocation(result);
               }}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Maps_pin.svg/274px-Google_Maps_pin.svg.png"
-              className={"h-8 cursor-pointer"}
+              className={"h-8 cursor-pointer z-1"}
               alt=""
             />
             </p>
@@ -67,7 +68,7 @@ function Map(props) {
                         >
                             <div className="p-3 min-w-[300px]  relative z-50 rounded-2xl">
                                 <div className="image_wrapper">
-                                  <img src={result.img} loading="lazy" className="w-full object-cover h-48 rounded-lg mb-3 image" alt="" />
+                                  <img src={result.img} loading="lazy" className="w-full object-cover z-50 h-48 rounded-lg mb-3 image" alt="" />
                                 </div>
                                 <h3 className="text-lg font-medium text-black mb-2">{result.title}</h3>
                                 <div className="flex justify-between items-center">

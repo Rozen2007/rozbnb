@@ -8,7 +8,8 @@ import {
 } from "@heroicons/react/solid";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { DateRangePicker } from "react-date-range";
+
+import { DateRange, DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
 import React, { useState, useEffect } from 'react';
 
@@ -104,15 +105,25 @@ function Header({ placeholder }) {
       </div>
 
       {/* Date range picker */}
-      <div className="absolute w-screen md:w-[580px] left-1 top-20 md:left-[20%] lg:left-[30%]   z-50">
+      <div className="absolute md:w-[580px]  top-20 md:left-[20%] lg:left-[30%]  sm:left-[0%] sm:rounded-none sm:right-[5%] z-50">
         {searchInput && (
           <div className="z-50 flex flex-col p-5 mt-5 bg-white shadow-md md:col-span-4 w-max rounded-xl">
+         <div className={"hidden md:inline-flex"}>
             <DateRangePicker
               ranges={[selectionRange]}
               minDate={new Date()}
               rangeColors={["#FD5B61"]}
               onChange={handleSelect}
             />
+          </div>
+          <div className={"md:hidden flex "}>
+            <DateRange
+              ranges={[selectionRange]}
+              minDate={new Date()}
+              rangeColors={["#FD5B61"]}
+              onChange={handleSelect}
+            />
+          </div>
             <div className="flex w-screen md:w-[580px] items-center border-b mb-4 top-auto right-auto bottom-auto left-auto bg-white">
               <h2 className="flex-grow text-2xl font-semibold">
                 Number of Guests
