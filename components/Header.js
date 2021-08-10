@@ -73,7 +73,7 @@ function Header({ placeholder }) {
       {/* Left logo */}
       <div
         onClick={() => router.push("/")}
-        className="relative flex items-center h-10 my-auto cursor-pointer"
+        className="relative flex items-center  h-7 md:h-10  my-auto cursor-pointer"
       >
         <Image
           src="https://links.papareact.com/qd3"
@@ -88,7 +88,7 @@ function Header({ placeholder }) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
-          className="flex-grow pl-5 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none "
+          className="flex-grow pl-1 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none "
           placeholder={placeholder || "Start Your Search..."}
         />
         <SearchIcon className="hidden h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:inline-flex md:mx-2" />
