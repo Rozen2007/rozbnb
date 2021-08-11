@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
-
+import { Provider } from "next-auth/client";
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
 
@@ -15,8 +15,11 @@ Router.events.on("routeChangeStart", progress.start);
 Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function App({ Component, pageProps }) {
+  return (
+    <Provider session={pageProps.session}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
-export default MyApp;

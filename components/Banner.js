@@ -11,7 +11,7 @@ function Banner() {
             <br /> Online
             <br /> Experiences
           </p>
-          <button className="bg-white rounded-2xl px-5 md:px-10 py-3 sm:mt-3 text-xs md:text-lg lg:mt-5 shadow-md drop-shadow-lg font-bold my-3 hover:shadow-xl active:scale-90 transition transform duration-150">
+          <button  className="bg-white rounded-2xl px-5 md:px-10 py-3 sm:mt-3 text-xs md:text-lg lg:mt-5 shadow-md drop-shadow-lg font-bold my-3 hover:shadow-xl active:scale-90 transition transform duration-150">
             Explore Now
           </button>
         </div>

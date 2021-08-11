@@ -29,7 +29,7 @@ function Map(props) {
       width="100%"
       height="100vh"
       onViewportChange={(viewport) => setViewport(viewport)}
-      className=" z-0 sticky -mb-[40vh] absolute shadow-xl bottom-0 bg-gradient-to-t from-blue-to-gray bg-fixed "
+      className=" sticky z-0 -mb-[40vh]  shadow-xl bottom-0 bg-gradient-to-t from-blue-to-gray bg-fixed "
       style={{marginBottom: '-40vh'}}
     >
       {props.searchResults.map((result) => (
