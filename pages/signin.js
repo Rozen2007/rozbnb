@@ -34,7 +34,7 @@ function signin({ providers }) {
                     </div>
                     
 
-                    <div className="mt-16 md:mx-7 mx-0  bg-red-400 w-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition duration-200" onClick={() => signIn(provider.id)} >
+                    <div className="mt-16 mx-auto  bg-red-400 w-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition duration-200" onClick={() => signIn(provider.id)} >
                     Sign in with {provider.name}
                     </div>
             </div>

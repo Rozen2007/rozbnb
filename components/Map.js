@@ -22,6 +22,7 @@ function Map(props) {
     zoom: 12,
   });
   return (
+    <div className="bg-gradient-to-t from-transparent to-white">  
     <ReactMapGL
       mapStyle="mapbox://styles/rozen2007/cks17c2qh4hwo18p6sdgj1kdv/draft"
       mapboxApiAccessToken="pk.eyJ1Ijoicm96ZW4yMDA3IiwiYSI6ImNrczE3NDBiNTFxdzEybm44bm9jdjFnOXkifQ.JDPUCSZn5aoKkzkY5-5KzQ"
@@ -29,8 +30,8 @@ function Map(props) {
       width="100%"
       height="100vh"
       onViewportChange={(viewport) => setViewport(viewport)}
-      className=" sticky z-0 -mb-[40vh]  shadow-xl bottom-0 bg-gradient-to-t from-blue-to-gray bg-fixed "
-      style={{marginBottom: '-40vh'}}
+      className=" sticky z-0 -mb-[40vh]  bottom-0   "
+      style={{marginBottom: '-40vh', backgroundImage: 'linearGradient(red, yellow)',}}
     >
       {props.searchResults.map((result) => (
         <div key={result.long}>
@@ -90,6 +91,7 @@ function Map(props) {
         </div>
       ))}
     </ReactMapGL>
+    </div>  
   );
 }
 
