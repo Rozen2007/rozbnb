@@ -5,8 +5,6 @@ import Header from "../components/Header";
 import Head from "next/head";
 
 const Success = ({ session }) => {
-  if (!session) return <Login />;
-
   const router = useRouter();
 
   return (
