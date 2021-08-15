@@ -10,7 +10,7 @@ export default async (req, res) => {
         description: description,
         quantity: 1,
         price_data: {
-          currency: "inr",
+          currency: "gbp",
           unit_amount: price * 100,
           product_data: {
             name: title,
