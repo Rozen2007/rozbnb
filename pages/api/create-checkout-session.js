@@ -1,32 +1,34 @@
-const stripe = require("stripe")("sk_test_51IuEbNSFhYF5q8wPGqLCIss66FKpgduz2v8ZeyK6pltEKxnjnkbVtBX5xWDPIXrNWoJzf2walETxnkvSTKL23yIe00aUeH97Vr");
+const stripe = require("stripe")(
+  "sk_test_51IuEbNSFhYF5q8wPGqLCIss66FKpgduz2v8ZeyK6pltEKxnjnkbVtBX5xWDPIXrNWoJzf2walETxnkvSTKL23yIe00aUeH97Vr"
+);
 
 export default async (req, res) => {
-    const { items, email } = req.body;
-
-    const transformedItems = items.map((item) => ({
-        description: item.description,
+  if (req.method == "POST") {
+    const { img, title, description, price } = req.body;
+    const transformedItems = [
+      {
+        description: description,
         quantity: 1,
         price_data: {
-            currency: "inr",
-            unit_amount: item.total * 100,
-            product_data: {
-                name: item.title,
-                images: [item.img]
-            },
-        }
-    }));
+          currency: "inr",
+          unit_amount: price * 100,
+          product_data: {
+            name: title,
+            images: [img],
+          },
+        },
+      },
+    ];
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await stripe.checkout.sessions
+      .create({
         payment_method_types: ["card"],
         line_items: transformedItems,
         mode: "payment",
-        success_url: `http://localhost:3000/success`,
-        cancel_url: `http://localhost:3000/`,
-        metadata: {
-            email,
-            images: JSON.stringify(items.map((item) => item.img))
-        },
-    })
-
+        success_url: `${process.env.HOST}/success`,
+        cancel_url: `${process.env.HOST}/error`,
+      })
+      .catch((err) => res.status(500).json({ error: err.message }));
     res.status(200).json({ id: session.id });
-}
+  }
+};
