@@ -11,7 +11,7 @@ export default async (req, res) => {
         quantity: 1,
         price_data: {
           currency: "gbp",
-          unit_amount: price * 100,
+          unit_amount: price + 10 ,
           product_data: {
             name: title,
             images: [img],
