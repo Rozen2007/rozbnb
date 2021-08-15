@@ -8,7 +8,8 @@ import SmallCard from "../components/SmallCard";
 import HostingCard from "../components/HostingCard"
 import Loader from "../components/Loader"
 import { useEffect, useState } from "react";
-
+import { live, discover } from "../data";
+import Cards from "../components/Cards";
 
 export default function Home({ exploreData, liveAnywhere }) {
   const [loading, setLoading] = useState(false);
@@ -44,21 +45,14 @@ export default function Home({ exploreData, liveAnywhere }) {
         <div>
           <Header />
           <Banner />
-          <main className="max-w-7xl mx-auto px-8 p-10  m-5 shadow-xl sm:px-16">
+          <main className="max-w-7xl mx-auto px-8 p-10 pb-16 rounded-lg m-5 shadow-xl sm:px-16">
             <section className="pt-6">
               <h2 className="text-3xl sm:text-4xl font-semibold pb-5">
                 Explore Nearby
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {exploreData?.map(({ location, img, distance }) => (
-                  <SmallCard
-                    key={location}
-                    img={img}
-                    location={location}
-                    distance={distance}
-                  />
-                ))}
-              </div>
+          
+              <SmallCard/>
+            
               <LargeCard
               img="https://links.papareact.com/4cj"
               title="The Greatest Outdoors"
@@ -67,13 +61,11 @@ export default function Home({ exploreData, liveAnywhere }) {
             />
             </section>
             <section className="pt-6">
-              <h2 className="text-3xl sm:text-4xl font-semibold pb-5">
-                Live Anywhere
-              </h2>
-              <div className="flex space-x-3 overflow-scroll p-3 -ml-3 scrollbar-hide">
-                {liveAnywhere?.map(({ img, title }) => (
-                  <MediumCard key={img} img={img} title={title} />
-                ))}
+              <Cards {...live} />
+
+
+              <div className="pt-20">
+              <Cards {...discover}/>
               </div>
               <HostingCard
                 img="https://a0.muscache.com/im/pictures/5b4dc94a-0b4c-4c27-b50f-9c5a5b93c775.jpg"

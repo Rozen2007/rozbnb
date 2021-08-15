@@ -110,9 +110,9 @@ function Header({ placeholder }) {
       </div>
 
       {/* Date range picker */}
-      <div className="absolute md:w-[580px]  top-20 md:left-[20%] lg:left-[30%]  sm:left-[0%] sm:rounded-none sm:right-[5%] z-50">
+      <div className="absolute md:w-[580px]  top-20 md:left-[20%] lg:left-[30%]  z-50">
         {searchInput && (
-          <div className="z-50 flex flex-col p-5 mt-5 bg-white shadow-md md:col-span-4 w-max rounded-xl">
+          <div className="z-50 flex flex-col p-5 mt-5 bg-white shadow-md md:col-span-4 w-max rounded-xl   ">
          <div className={"hidden md:inline-flex"}>
             <DateRangePicker
               ranges={[selectionRange]}
@@ -121,7 +121,7 @@ function Header({ placeholder }) {
               onChange={handleSelect}
             />
           </div>
-          <div className={"md:hidden flex "}>
+          <div className={"md:hidden flex sm:p-0"}>
             <DateRange
               ranges={[selectionRange]}
               minDate={new Date()}

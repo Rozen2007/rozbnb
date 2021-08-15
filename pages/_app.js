@@ -4,6 +4,7 @@ import ProgressBar from "@badrap/bar-of-progress"
 import { Provider } from "react-redux"
 import { store } from "../app/store"
 import { Provider as AuthProvider } from "next-auth/client"
+import "../styles/global.css";
 
 const progress = new ProgressBar({
   size: 4,
