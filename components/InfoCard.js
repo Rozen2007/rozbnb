@@ -96,7 +96,7 @@ const InfoCard = ({
           </p>
           <div className="flex flex-col justify-end -mt-2">
             <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
-            <p className="text-right font-extralight">${total}</p>
+            <p className="text-right font-extralight">{total}</p>
             {items.length > 0 ? (
               <>
                 {items.map((item) => {
