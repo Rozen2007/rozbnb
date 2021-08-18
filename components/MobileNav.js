@@ -61,7 +61,8 @@ const MobileNavDiv = styled.div`
       transform: translateX(3rem);
       flex-direction: column;
       gap: 0.5rem;
-      background: #f9dc9b ;
+      background: rgba(249,220,155,0.5) ;
+      backdrop-filter: blur(9px);
       color: #1e1e38;
       padding: 1rem 1.5rem 1rem 0.75rem;
       border-radius: 1rem 0 0 1rem;
