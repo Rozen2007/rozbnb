@@ -6,6 +6,7 @@ import InfoCard from "../components/InfoCard";
 import Head from "next/head";
 import Fade from 'react-reveal/Fade';
 import Map from "../components/Map";
+import MobileNav from "../components/MobileNav";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -31,7 +32,7 @@ function Search({ searchResults }) {
         <Map searchResults={searchResults} />
 
      
-
+      <MobileNav/>
       <main className="  -mb-[60%] -mt-[100px] relative mx-42 md:w-[73%] bg-white shadow-2xl m-3 ml-12  p-8 t-0 rounded-2xl mr-10 mt-0 pb-10  md:ml-40 lg:ml-52 z-10">    
           <p className="text-xs ">
             300+ Stays - <span className="font-bold">{range}</span>- for {noOfGuests} guests

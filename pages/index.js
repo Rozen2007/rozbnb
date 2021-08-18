@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
-import MediumCard from "../components/MediumCard";
+import MobileNav from "../components/MobileNav";
 import SmallCard from "../components/SmallCard";
 import HostingCard from "../components/HostingCard"
 import Loader from "../components/Loader"
@@ -44,7 +44,8 @@ export default function Home({ exploreData, liveAnywhere }) {
        ):(
         <div>
           <Header />
-          <Banner />
+          <Banner/>
+          <MobileNav/>
           <main className="max-w-7xl mx-auto px-8 p-10 pb-16 rounded-lg m-5 shadow-xl sm:px-16">
             <section className="pt-6">
               <h2 className="text-3xl sm:text-4xl font-semibold pb-5">

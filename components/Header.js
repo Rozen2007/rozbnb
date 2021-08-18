@@ -93,17 +93,17 @@ function Header({ placeholder }) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
-          className="flex-grow pl-2 md:pl-4 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none "
+          className="flex-grow pl-2 md:pl-4 text-sm text-gray-400 placeholder-gray-400 bg-transparent outline-none "
           placeholder={placeholder || "Start Your Search..."}
         />
         <SearchIcon className="hidden h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:inline-flex md:mx-2" />
       </div>
       {/* Right */}
-      <div className="hidden md:flex items-center justify-end space-x-4 text-gray-400">
+      <div className="hidden md:flex items-center justify-end space-x-4 text-gray-800">
         <p className="hidden pl-4 font-bold cursor-pointer md:inline font">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer" />
 
-        <div className="flex items-center p-2 space-x-2 text-gray-400 bg-white border-2 rounded-full">
+        <div className="flex items-center p-2 space-x-2 text-gray-800 bg-white border-2 rounded-full">
           <MenuIcon className="h-7 cursor-pointer" />
           {session?.user ? <img src={session?.user?.image} alt={session?.user?.name} className="h-7 cursor-pointer rounded-full"  onClick={() => signOut()}/> :<UserCircleIcon className="h-7 cursor-pointer"onClick={() => router.push("/signin")} />}
         </div>

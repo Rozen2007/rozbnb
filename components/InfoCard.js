@@ -117,7 +117,7 @@ const InfoCard = ({
                         onClick={continueToBooking}
                         className="bg-red-400 py-1.5 rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
                       >
-                        {!session ? "Sign in to book" : "Continue to Booking"}
+                        {!session ? "Sign in to book" : "Book Now"}
                       </button>
                     );
                   }
@@ -129,7 +129,7 @@ const InfoCard = ({
                 onClick={continueToBooking}
                 className="bg-red-400 py-1.5 rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
               >
-                {!session ? "Sign in to book" : "Continue to Booking"}
+                {!session ? "Sign in to book" : "Book Now"}
               </button>
             )}
           </div>

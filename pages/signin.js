@@ -15,7 +15,7 @@ function signin({ providers }) {
                 <title>SignIn</title>
             
           </Head>
-            <div className="w-[25%] sm:h-full  items-center justify-center mx-[38%] mt-[8%] rounded-xl bg-[#ff5a5f] p-10 shadow-2xl ">
+            <div className="min-width-[50px] sm:h-full  items-center justify-center mx-[10%] mt-[30%] md:mx-[38%] md:mt-[10%] rounded-xl bg-[#ff5a5f] p-10 shadow-2xl ">
                 <NextNProgress
                   color="#ffff"
                   startPosition={0.3}
@@ -34,7 +34,7 @@ function signin({ providers }) {
                     </div>
                     
 
-                    <div className="mt-16 mx-auto  bg-red-400 w-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition duration-200" onClick={() => signIn(provider.id)} >
+                    <div className="mt-16 mx-auto  bg-red-400 max-width-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition duration-200" onClick={() => signIn(provider.id)} >
                     Sign in with {provider.name}
                     </div>
             </div>
