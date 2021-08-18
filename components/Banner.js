@@ -75,7 +75,7 @@ function Banner(props) {
                 dragElastic={0.10}
                 dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
                 whileTap={{ cursor: "grabbing" }}
-                className="absolute top-[12px]  md:top-[20%] lg:top-20 xl:top-32 left-12 backdrop-blur-md  p-5 rounded-md shadow-2xl z-40 "
+                className="absolute top-[12px]  md:top-[20%] lg:top-20 xl:top-32 left-12 backdrop-blur-md shadow-lg  p-5 rounded-md shadow-2xl z-40 "
               >
                 <h3 className="text-4xl font-semibold mb-3 w-64 ">
                   Want to go on an adventure?
