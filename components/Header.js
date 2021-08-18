@@ -99,7 +99,7 @@ function Header({ placeholder }) {
         <SearchIcon className="hidden h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:inline-flex md:mx-2" />
       </div>
       {/* Right */}
-      <div className="hidden md:flex items-center justify-end space-x-4 text-gray-800">
+      <div className="hidden md:flex items-center justify-end space-x-4 text-gray-400">
         <p className="hidden pl-4 font-bold cursor-pointer md:inline font">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer" />
 
