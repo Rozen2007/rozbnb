@@ -73,7 +73,7 @@ const InfoCard = ({
   // }
 
   return (
-    <div className="flex flex-col md:flex-row py-7 px-2 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
+    <div className="flex flex-col md:flex-row py-7 px-2 border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t">
       <div className="relative h-32 w-[100%] md:h-52 md:w-80 flex-shrink-0">
         <Image
           className="rounded-2xl"
@@ -105,7 +105,7 @@ const InfoCard = ({
                       <button
                         role="link"
                         onClick={createCheckoutSession}
-                        className="bg-red-400 py-1.5 rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
+                        className="bg-red-400 py-1.5 text-white rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
                       >
                         {!session ? "Sign in to book" : "Book Now"}
                       </button>
@@ -115,9 +115,9 @@ const InfoCard = ({
                       <button
                         role="link"
                         onClick={continueToBooking}
-                        className="bg-red-400 py-1.5 rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
+                        className="bg-red-400 py-1.5 text-white rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
                       >
-                        {!session ? "Sign in to book" : "Book Now"}
+                        {!session ? "Sign in to book" : "Pay Now"}
                       </button>
                     );
                   }
@@ -127,9 +127,9 @@ const InfoCard = ({
               <button
                 role="link"
                 onClick={continueToBooking}
-                className="bg-red-400 py-1.5 rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
+                className="bg-red-400 py-1.5 text-white rounded-xl mt-2 shadow-md transition transform duration-200 ease-out hover:scale-105 active:scale-90 font-semibold px-3"
               >
-                {!session ? "Sign in to book" : "Book Now"}
+                {!session ? "Sign in to book" : "Pay Now"}
               </button>
             )}
           </div>
