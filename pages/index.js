@@ -34,7 +34,7 @@ export default function Home({ exploreData, liveAnywhere }) {
           content="Airbnb-clone, Airbnb-Rozen, Airbnb-2-rozen, Rozen Deedi"
         />
         <meta property="og:title" content="Rozen's Airbnb" />
-        <meta property="og:image" content="https://res.cloudinary.com/dp0qzldgh/image/upload/v1628345132/Untitled_design_3_ybcutg.png" />
+        <meta property="og:image" content="https://res.cloudinary.com/dp0qzldgh/image/upload/v1629617277/Untitled_design_6_hrsxdv.png" />
         <meta property="og:url" content="https://airbnb-2-rozen.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />`
       </Head>
