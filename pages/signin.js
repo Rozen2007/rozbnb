@@ -15,7 +15,7 @@ function signin({ providers }) {
                 <title>SignIn</title>
             
           </Head>
-            <div className="min-width-[50px] sm:h-full  items-center justify-center mx-[10%] mt-[30%] md:mx-[38 %] md:mt-[10%] rounded-xl bg-[#ff5a5f] p-10 shadow-2xl ">
+            <div className="min-width-[50px] sm:h-full  items-center justify-center mx-[10%] mt-[30%] md:mx-[38%] md:mt-[10%] rounded-xl bg-[#ff5a5f] p-10 shadow-2xl ">
                 <NextNProgress
                   color="#ffff"
                   startPosition={0.3}
