@@ -36,7 +36,8 @@ export default function Home({ exploreData, liveAnywhere }) {
         <meta property="og:title" content="Rozen's Airbnb" />
         <meta property="og:image" content="https://res.cloudinary.com/dp0qzldgh/image/upload/v1629617277/Untitled_design_6_hrsxdv.png" />
         <meta property="og:url" content="https://airbnb-2-rozen.vercel.app/" />
-        <meta name="twitter:card" content="summary_large_image" />`
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="shortcut icon" href="https://www.airbnb.co.in/favicon.ico" />
       </Head>
       {
       loading?(

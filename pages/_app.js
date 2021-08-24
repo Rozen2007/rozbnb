@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import { store } from "../app/store"
 import { Provider as AuthProvider } from "next-auth/client"
 import "../styles/global.css";
-
+import Head from "next/head";
 const progress = new ProgressBar({
   size: 4,
   color: "#f35953",
@@ -19,11 +19,16 @@ Router.events.on("routeChangeError", progress.finish);
 
 const MyApp = ({ Component, pageProps }) => {
   return (
+    <>
+    <Head>
+      <link rel="shortcut icon" href="https://www.airbnb.co.in/favicon.ico" />
+    </Head>
     <Provider store={store}>
       <AuthProvider session={pageProps.session}>
         <Component {...pageProps} />
       </AuthProvider>
     </Provider>
+    </>
   )
 }
 
