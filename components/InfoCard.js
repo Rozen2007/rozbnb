@@ -73,7 +73,7 @@ const InfoCard = ({
   // }
 
   return (
-    <div className="flex flex-col md:flex-row py-7 px-2 border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t">
+    <div className="flex flex-col md:flex-row py-7 px-3 border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t">
       <div className="relative h-32 w-[100%] md:h-52 md:w-80 flex-shrink-0">
         <Image
           className="rounded-2xl"
@@ -95,7 +95,7 @@ const InfoCard = ({
             <StarIcon className="h-5 text-red-400" /> {star}
           </p>
           <div className="flex flex-col justify-end -mt-2">
-            <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
+            <p className="text-right lg:text-2xl font-semibold pb-2 pr-4">{price}</p>
             <p className="text-right font-extralight">{total}</p>
             {items.length > 0 ? (
               <>
