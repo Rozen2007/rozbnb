@@ -29,7 +29,7 @@ const Success = ({ session }) => {
           </div>
           <button
             onClick={() => router.push("/")}
-            className="bg-red-400 rounded-xl font-semibold py-2 mt-8"
+            className="bg-red-400 text-white rounded-xl font-semibold py-2 mt-8 "
           >
             Return to Home
           </button>
