@@ -24,16 +24,16 @@ export default function Home({ exploreData, liveAnywhere }) {
     <div>
       
       <Head>
-        <title>Airbnb: Holiday Rentals, Cabins, Beach Houses </title>
+        <title>Rozbnb: Holiday Rentals, Cabins, Beach Houses </title>
         <meta
           name="description"
-          content="Airbnb clone made by rozen using Next.js, Tailwind.css, etc"
+          content="Rozbnb clone made by rozen using Next.js, Tailwind.css, etc"
         />
         <meta
           name="keywords"
-          content="Airbnb-clone, Airbnb-Rozen, Airbnb-2-rozen, Rozen Deedi"
+          content="Rozbnb-clone, Rozbnb-Rozen, Rozbnb-2-rozen, Rozen Deedi"
         />
-        <meta property="og:title" content="Rozen's Airbnb" />
+        <meta property="og:title" content="Rozbnb" />
         <meta property="og:image" content="https://res.cloudinary.com/dp0qzldgh/image/upload/v1629617277/Untitled_design_6_hrsxdv.png" />
         <meta property="og:url" content="https://airbnb-2-rozen.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@ export default function Home({ exploreData, liveAnywhere }) {
               <LargeCard
               img="https://links.papareact.com/4cj"
               title="The Greatest Outdoors"
-              description="Wishlists curated by Airbnb."
+              description="Wishlists curated by Rozbnb."
               buttonText="Get Inspired"
             />
             </section>
@@ -93,7 +93,7 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
-  const liveAnywhere = await fetch("https://links.papareact.com/zp1").then(
+  const liveAnywhere = await fetch("https://jsonkeeper.com/b/VHHT").then(
     (res) => res.json()
   );
   const discoverExpCard = await fetch("https://jsonkeeper.com/b/UELS").then(

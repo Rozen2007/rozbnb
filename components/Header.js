@@ -78,10 +78,10 @@ function Header({ placeholder }) {
       {/* Left logo */}
       <div
         onClick={() => router.push("/")}
-        className="relative flex items-center  h-7 md:h-10  my-auto cursor-pointer"
+        className="relative h-10 flex items-center md:h-10  my-auto cursor-pointer"
       >
         <Image
-          src="https://links.papareact.com/qd3"
+          src="https://res.cloudinary.com/dp0qzldgh/image/upload/v1629996190/rozbnb_2_iab2wa.png"
           layout="fill"
           objectFit="contain"
           objectPosition="left"

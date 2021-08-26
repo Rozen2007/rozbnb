@@ -20,7 +20,7 @@ function Search({ searchResults }) {
   return (
     <div className=" h-screen">
       <Head>
-        <title>Airbnb: {location}  </title>
+        <title>Rozbnb: {location}  </title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header

@@ -3,22 +3,22 @@ function Footer() {
     <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 px-16 md:px-32 py-14 bg-gray-100">
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">ABOUT</h5>
-        <p className="hover:underline cursor-pointer">How Airbnb works</p>
+        <p className="hover:underline cursor-pointer">How Rozbnb works</p>
         <p className="hover:underline cursor-pointer">Newsroom</p>
-        <p className="hover:underline cursor-pointer">Airbnb 2021</p>
+        <p className="hover:underline cursor-pointer">Rozbnb 2021</p>
         <p className="hover:underline cursor-pointer">Investors</p>
-        <p className="hover:underline cursor-pointer">Airbnb Plus</p>
-        <p className="hover:underline cursor-pointer">Airbnb Luxe</p>
+        <p className="hover:underline cursor-pointer">Rozbnb Plus</p>
+        <p className="hover:underline cursor-pointer">Rozbnb Luxe</p>
       </div>
 
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">COMMUNITY</h5>
         <p className="hover:underline cursor-pointer">Diversity & Belonging</p>
         <p className="hover:underline cursor-pointer">Accessibility</p>
-        <p className="hover:underline cursor-pointer">Airbnb Associates</p>
+        <p className="hover:underline cursor-pointer">Rozbnb Associates</p>
         <p className="hover:underline cursor-pointer">Frontline Stays</p>
         <p className="hover:underline cursor-pointer">Guest Referrals</p>
-        <p className="hover:underline cursor-pointer">Airbnb.org</p>
+        <p className="hover:underline cursor-pointer">Rozbnb.org</p>
       </div>
 
       <div className="space-y-4 text-xs text-gray-800">
