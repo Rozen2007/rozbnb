@@ -63,15 +63,15 @@ export default function Footer() {
               English
             </span>
             <span className={"cursor-pointer"}>
-             <span className="mr-[-0.1rem] font-extrabold ">£ </span> GPB
+             <span className="mr-[0.5rem] font-extrabold ">£ </span> GPB
             </span>
-            <span>
+            <span className={"mr-[1rem]"}>
               <Facebook />
             </span>
               <Twitter/>
             <span >
             </span>
-            <span>
+            <span className={"ml-0"}>
               <Instagram />
             </span>
           </p>
