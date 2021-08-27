@@ -61,22 +61,24 @@ const Login = ({providers}) => {
                 <link rel="icon" href="/favicon.ico" />
   {Object.values(providers).map((provider) => {
         return (
-            <div className={"bg-[#ff5a5f] md:left-[50%] md:p-[50px] px-[10%] py-[10%] left-[50%] ml-0  text-center shadow-2xl"}
+            <div className={"bg-[#ff5a5f] md:left-[50%] md:p-[50px] px-[10%] left-[50%]   translate-x-[-50%] translate-y-[-50%] text-center shadow-2xl"}
                 style={{
                     position: "absolute",
                     top: "50%",
                     // left: "50%",
-                    transform: "translateX(-50%) translateY(-50%)",
+                    // transform: "translateX(-50%) translateY(-50%)",
                     borderRadius: "5px",
                     borderRadius: 10
+                    
+                    
                 }}
             >
-                                  
+               <div className="flex flex-col items-center mt-10">                   
               <img
-                    className={"cursor-pointer h-44 w-56 sm:pl-0 sm:w-48 pr-0 pl-[10%] "}
+                    className={"cursor-pointer h-[480] w-[640]  sm:w-52 "}
                     src="https://cdn.dribbble.com/users/385247/screenshots/3623803/01_06_2017_airbnb_800x600.gif"
-                />
-                <button className="mt-16 text-xs  p-2 mx-auto  bg-red-400 max-width-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition outline-none
+                /></div>
+                <button className="mt-9 md:mb-0 mb-10 text-xs  p-2 mx-auto  bg-red-400 max-width-30 lg:w-60 md:w-40 text-white items-center  focus:hover:ring-2 uppercase text-center rounded-xl py-2 cursor-pointer hover:bg-red-500 transition outline-none
                  duration-200" onClick={() => signIn(provider.id)} >Sign In With {provider.name}</button>
             </div>  
         )
