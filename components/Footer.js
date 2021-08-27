@@ -62,15 +62,14 @@ export default function Footer() {
               <Globe className="globe" />
               English
             </span>
-            <span>
-              <DollarSign className="dollar" />
-              USD
+            <span className={"cursor-pointer"}>
+             <span className="mr-[-0.1rem] font-extrabold ">£ </span> GPB
             </span>
             <span>
               <Facebook />
             </span>
-            <span>
-              <Twitter />
+              <Twitter/>
+            <span >
             </span>
             <span>
               <Instagram />
@@ -79,7 +78,7 @@ export default function Footer() {
           <p>
             &copy; 2021{" "}
             <a href="https://rozen-portfolio.web.app/" target="_blank" rel="noreferrer">
-              Rozen Deed
+              Rozen Deedi
             </a>
           </p>
         </span>
@@ -137,27 +136,30 @@ const FooterSection = styled.footer`
       justify-content: space-between;
       a {
         margin-left: 0.5rem;
+          cursor: pointer;
       }
       a:hover {
         text-decoration: underline;
+          cursor: pointer;
         color: #e0565b;
       }
       svg {
         height: 1rem;
+          cursor: pointer;
       }
       svg.globe {
+          cursor: pointer;
         margin-right: 0.1rem;
-      }
-      svg.dollar {
-        margin-right: -0.1rem;
       }
       span + span {
         margin-left: 1rem;
+          cursor: pointer;
       }
       p,
       span {
         display: flex;
         align-items: center;
+          cursor: pointer;
       }
     }
   }
