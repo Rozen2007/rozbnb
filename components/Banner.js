@@ -48,7 +48,7 @@ function Banner(props) {
               dragElastic={0.16}
               dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0, }}
               whileTap={{ cursor: "grabbing" }}
-              className="w-[300px] sm:left-0 h-[250px] md:w-[500px] md:h-[300px]  lg:w-[700px] lg:h-[500px] xl:h-96 xl:w-full  bg-[#f9dc9b] bg-opacity-80 rounded-2xl"
+              className=" w-[300px] h-[250px]  md:h-[300px] lg:w-full lg:h-[350px] xl:h-96 sm:left-0     bg-[#f9dc9b] bg-opacity-80 rounded-2xl"
             >
               <motion.div
                 style={{ perspective: 2000, x, y, rotateX, rotateY, z: 100, cursor:'grab' }}
