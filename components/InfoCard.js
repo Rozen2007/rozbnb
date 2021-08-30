@@ -38,20 +38,26 @@ const InfoCard = ({
     );
   };
   const createCheckoutSession = async () => {
-    const stripe = await stripePromise;
-    const newPrice = parseInt(price.slice(1, -1)) * 101;
-    const checkoutSession = await axios.post("/api/create-checkout-session", {
-      img: img,
-      title: title,
-      description: description,
-      price: newPrice,
-    });
-    const result = await stripe.redirectToCheckout({
-      sessionId: checkoutSession.data.id,
-    });
+    if (!session) {
+      alert("Please sign in");
+    }
 
-    if (result.error) {
-      alert(result.error.message);
+    if (session) {
+      const stripe = await stripePromise;
+      const newPrice = parseInt(price.slice(1, -1)) * 101;
+      const checkoutSession = await axios.post("/api/create-checkout-session", {
+        img: img,
+        title: title,
+        description: description,
+        price: newPrice,
+      });
+      const result = await stripe.redirectToCheckout({
+        sessionId: checkoutSession.data.id,
+      });
+
+      if (result.error) {
+        alert(result.error.message);
+      }
     }
   };
 
@@ -95,7 +101,9 @@ const InfoCard = ({
             <StarIcon className="h-5 text-red-400" /> {star}
           </p>
           <div className="flex flex-col justify-end -mt-2">
-            <p className="text-right lg:text-2xl font-semibold pb-2 pr-4">{price}</p>
+            <p className="text-right lg:text-2xl font-semibold pb-2 pr-4">
+              {price}
+            </p>
             <p className="text-right font-extralight">{total}</p>
             {items.length > 0 ? (
               <>
